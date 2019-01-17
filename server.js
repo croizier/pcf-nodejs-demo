@@ -25,7 +25,7 @@ function handler(req, res) {
     if (req.url === '/metrics' ||
         req.url === '/actuator/metrics') {
         res.write(JSON.stringify({ names: [ "requests" ] }))
-    else if (req.url === 'actuator/metrics/requests') {
+    } else if (req.url === '/actuator/metrics/requests') {
         res.write(JSON.stringify(metrics()))
     } else if (req.url === '/health') {
         // health-check-http-endpoint
